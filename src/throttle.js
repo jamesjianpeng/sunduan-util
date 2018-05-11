@@ -24,6 +24,10 @@ exports.throttle = function (callback, interval) {
 /*
 * use
 *
+* var func = function() {
+*   console.log(window.innerWidth, window.innerHeight)
+* }
+*
 * func = throttle(func, 2000)
 * window.addEventListener('resize', func)
 *
