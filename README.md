@@ -11,6 +11,7 @@
   import {
     hello,
     throttle, // 节流函数
+    deepClone,
     // array function
     pop,
     forEach
@@ -24,24 +25,38 @@
 
   ```
 
-	  console.log(hello.hello(), 'sunDuanUtil');
+	console.log(hello.hello(), 'sunDuanUtil');
 
   ```
 
 ### throttle  
+  - throttle(callback,time)
+  
+  | params    | type       | default  | require  |
+  | --------- |:---------- |:-------- |---------:|
+  | callback  | Function   | -        | true     |
+  | time      | Number     | 500      | false    |
+  | return    | -          | -        |  -       |
 
   ```
 
-    var func = function() {
-      console.log(window.innerWidth, window.innerHeight);
-    }
+  var func = function() {
+    console.log(window.innerWidth, window.innerHeight);
+  }
 
-    func = throttle(func, 2000);
-    window.addEventListener('resize', func);
+  func = throttle(func, 2000);
+  window.addEventListener('resize', func);
 
   ```
 
 ### pop
+  - pop(list)
+  
+  |           | type       | default  | require  |
+  | --------- |:---------- |:-------- |---------:|
+  | list      | Object     | -        |  true    |
+  | return    | Array      | -        |  -       |
+  
 
   ```
 
@@ -55,6 +70,13 @@
   ```
 
 ### forEach
+  - forEach(obj, callback)
+  
+  |           | type       | default  | require  |
+  | --------- |:---------- | :--------|---------:|
+  | obj       | Object     | -        |  true    |
+  | callback  | Function   | -        |  true    |
+  | return    | -          | -        |  -       |
 
   ```
 
@@ -71,6 +93,13 @@
   ```
 
 ### buildURL
+  - buildURL(url, params)
+  
+  |           | type       | default  | require  |
+  | --------- |:---------- |:-------- |---------:|
+  | url       | String     | -        |  true    |
+  | params    | Object     | null     |  false   |
+  | return    | String     | -        |  true    |
 
   ```
   var url = 'https://testxxxx.com/comments';
@@ -84,5 +113,49 @@
   var url = buildURL(url, params);
 
   console.log(url); // https://testxxxx.com/comments?postId=1&page=1&pageSize=10
+
+  ```
+
+### deepClone
+  - deepClone(obj, type)
+  
+  type: default | JSON
+  
+  |           | type       | default  | require  |
+  | --------- |:----------:|:--------:|---------:|
+  | obj       | Object     | -        |  true    |
+  | type      | String     | default  |  false   |
+  | return    | String     | -        |  true    |
+
+  ```
+  var obj = {
+    a: 'a',
+    b: 'b',
+    c: 'c',
+    d: {
+      one: 'd1',
+      two: 'd2'
+    },
+    e: ['e1', 'e2', 'e3', 'e4']
+  }
+  var newObj = deepClone(obj)
+  newObj.e.push('e5')
+  console.log(newObj.e) // ['e1', 'e2', 'e3', 'e4', 'e5']
+  console.log(obj.e) // ['e1', 'e2', 'e3', 'e4']
+
+  var obj = {
+    a: 'a1',
+    b: 'b2',
+    c: 'c3',
+    d: {
+      one: 'd1',
+      two: 'd2'
+    },
+    e: ['e1', 'e2', 'e3', 'e4']
+  }
+  var newObj = deepClone(obj, 'JSON')
+  newObj.d.one = 'd3'
+  console.log(newObj.d) // { one: 'd3', two: 'd2' }
+  console.log(obj.d) // { one: 'd1', two: 'd2' }
 
   ```
