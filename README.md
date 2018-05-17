@@ -19,19 +19,18 @@
 
   ```
 
-
 ### test
 
 
   ```
 
-	console.log(hello.hello(), 'sunDuanUtil');
+	console.log(hello(), 'sunDuanUtil');
 
   ```
 
 ### throttle  
   - throttle(callback,time)
-  
+
   | params    | type       | default  | require  |
   | --------- |:---------- |:-------- |---------:|
   | callback  | Function   | -        | true     |
@@ -51,12 +50,12 @@
 
 ### pop
   - pop(list)
-  
+
   |           | type       | default  | require  |
   | --------- |:---------- |:-------- |---------:|
   | list      | Object     | -        |  true    |
   | return    | Array      | -        |  -       |
-  
+
 
   ```
 
@@ -71,7 +70,7 @@
 
 ### forEach
   - forEach(obj, callback)
-  
+
   |           | type       | default  | require  |
   | --------- |:---------- | :--------|---------:|
   | obj       | Object     | -        |  true    |
@@ -94,7 +93,7 @@
 
 ### buildURL
   - buildURL(url, params)
-  
+
   |           | type       | default  | require  |
   | --------- |:---------- |:-------- |---------:|
   | url       | String     | -        |  true    |
@@ -118,9 +117,9 @@
 
 ### deepClone
   - deepClone(obj, type)
-  
+
   type: default | JSON
-  
+
   |           | type       | default  | require  |
   | --------- |:----------:|:--------:|---------:|
   | obj       | Object     | -        |  true    |
