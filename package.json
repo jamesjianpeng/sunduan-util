@@ -1,6 +1,6 @@
 {
   "name": "sunduan-util",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "孙端的工具函数库",
   "main": "index.js",
   "scripts": {
