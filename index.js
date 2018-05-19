@@ -4,6 +4,7 @@ const pop = require('./lib/array/pop');
 const forEach = require('./lib/array/forEach');
 const buildURL = require('./lib/helper/buildURL');
 const deepClone = require('./lib/helper/deepClone');
+const FormatDate = require('./lib/helper/FormatDate');
 // let ajax = require('./lib/throttle').ajax;
 
 exports.hello = hello
@@ -12,4 +13,5 @@ exports.pop = pop
 exports.forEach = forEach
 exports.buildURL = buildURL
 exports.deepClone = deepClone
+exports.FormatDate = FormatDate
 // exports.ajax = ajax

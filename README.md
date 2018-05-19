@@ -14,7 +14,8 @@
     deepClone,
     // array function
     pop,
-    forEach
+    forEach,
+    FormatDate
   } from 'sunduan-util';
 
   ```
@@ -32,7 +33,7 @@
   - throttle(callback,time)
 
   | params    | type       | default  | require  |
-  | --------- |:---------- |:-------- |---------:|
+  | :-------- |:---------: |:-------: |:--------:|
   | callback  | Function   | -        | true     |
   | time      | Number     | 500      | false    |
   | return    | -          | -        |  -       |
@@ -52,7 +53,7 @@
   - pop(list)
 
   |           | type       | default  | require  |
-  | --------- |:---------- |:-------- |---------:|
+  | :-------- |:---------: |:-------: |:--------:|
   | list      | Object     | -        |  true    |
   | return    | Array      | -        |  -       |
 
@@ -72,7 +73,7 @@
   - forEach(obj, callback)
 
   |           | type       | default  | require  |
-  | --------- |:---------- | :--------|---------:|
+  | :--------- |:---------: | :-------:|:--------:|
   | obj       | Object     | -        |  true    |
   | callback  | Function   | -        |  true    |
   | return    | -          | -        |  -       |
@@ -85,7 +86,7 @@
   })
 
   var list = [1, 2, 3, 4]
-  forEach(obj, function(value, index, obj) {
+  forEach(list, function(value, index, obj) {
     console.log(value, index, obj);
   })
 
@@ -95,7 +96,7 @@
   - buildURL(url, params)
 
   |           | type       | default  | require  |
-  | --------- |:---------- |:-------- |---------:|
+  | --------- |:---------: |:-------: |:--------:|
   | url       | String     | -        |  true    |
   | params    | Object     | null     |  false   |
   | return    | String     | -        |  true    |
@@ -121,7 +122,7 @@
   type: default | JSON
 
   |           | type       | default  | require  |
-  | --------- |:----------:|:--------:|---------:|
+  | :-------- |:----------:|:--------:|:--------:|
   | obj       | Object     | -        |  true    |
   | type      | String     | default  |  false   |
   | return    | String     | -        |  true    |
@@ -158,3 +159,47 @@
   console.log(obj.d) // { one: 'd1', two: 'd2' }
 
   ```
+
+  ### FormatDate
+
+  formatDate.getDate(date, format)
+
+  format type: YYYY-MM-DD HH:mm:ss , YYYY/MM/DD HH:mm , YYYY/MM/DD HH , YYYY/MM/DD , YYYY/MM , YYYY ......
+  format 年月日中间使用非字母的字符代替
+
+  |           | type        | default              | require  |
+  | :-------- |:----------: |:--------------------:|:---------:|
+  | date      | Date|Number | -                    |  true    |
+  | format    | String      | YYYY/MM/DD HH:mm:ss  |  false   |
+
+
+   ```
+   var formatDate = new FormatDate()
+   var time = formatDate.getDate(+new Date())
+   console.log(time.date) // 2018/05/19 15:35:38
+
+   var formatDate = new FormatDate()
+   var timeTwo = formatDate.getDate(+new Date('2018/05/19 15:27:51'), 'YYYY-MM-DD HH:mm:ss')
+   console.log(timeTwo.date) // 2018-05-19 15:27:51
+
+   setTimeout(function () {
+     var timeTwo = formatDate.getDate(+new Date('2018/05/19 15:27:53'))
+     console.log(timeTwo.date) // 2018|05|19
+   }, 2000)
+
+   var timeTwo = formatDate.getDate(+new Date('2018/05/19 15:27:51'), 'YYYY-MM-DD HH:mm')
+   console.log(timeTwo.date) // 2018-05-19 15:27
+
+   var timeTwo = formatDate.getDate(+new Date('2018/05/19 15:27:51'), 'YYYY-MM-DD HH')
+   console.log(timeTwo.date) // 2018-05-19 15
+
+   var timeTwo = formatDate.getDate(+new Date('2018/05/19 15:27:51'), 'YYYY-MM-DD')
+   console.log(timeTwo.date) // 2018-05-19
+
+   var timeTwo = formatDate.getDate(+new Date('2018/05/19 15:27:51'), 'YYYY|MM|DD')
+   console.log(timeTwo.date) // 2018|05|19
+
+   var timeTwo = formatDate.getDate(+new Date('2018/05/19 15:27:51'), 'YYYY&MM&DD')
+   console.log(timeTwo.date) // 2018&05&19
+
+   ```
