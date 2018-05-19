@@ -4,7 +4,7 @@
   "description": "孙端的工具函数库",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "util",
@@ -14,7 +14,8 @@
   "email": "jamesjianpeng@gmail.com",
   "license": "MIT",
   "devDependencies": {
-    "cz-conventional-changelog": "^2.1.0"
+    "cz-conventional-changelog": "^2.1.0",
+    "mocha": "^5.2.0"
   },
   "repository": {
     "type": "git",
