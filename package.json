@@ -4,7 +4,8 @@
   "description": "孙端的工具函数库",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "node build/build.js"
   },
   "keywords": [
     "util",
@@ -15,7 +16,8 @@
   "license": "MIT",
   "devDependencies": {
     "cz-conventional-changelog": "^2.1.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "webpack": "^4.8.3"
   },
   "repository": {
     "type": "git",

@@ -19,6 +19,13 @@
   } from 'sunduan-util';
 
   ```
+Using cdn:
+
+  ```
+
+  <script src="https://unpkg.com/sunduan-util/dist/sunduan-util.js"></script>
+
+  ```
 
 ### test
 
