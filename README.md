@@ -1,5 +1,16 @@
 
-### init
+##sunduan-util
+--------
+主要为前端提供常用的工具函数
+
+### 特征
+1. 常用的 array 方法
+2. 对象的复制
+3. 时间格式的转化
+4. 函数节流
+
+
+### Using NPM
 
   ```
   install:
@@ -10,7 +21,7 @@
 
   import {
     hello,
-    throttle, // 节流函数
+    throttle, // 函数节流
     deepClone,
     // array function
     pop,
@@ -19,7 +30,7 @@
   } from 'sunduan-util';
 
   ```
-Using cdn:
+### Using CDN:
 
   ```
 
