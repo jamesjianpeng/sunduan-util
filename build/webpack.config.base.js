@@ -1,5 +1,5 @@
 const path = require('path');
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const webpackConfig = {
   // mode: 'production',
@@ -11,6 +11,11 @@ const webpackConfig = {
     library: 'sunduanUtil',
     libraryTarget:'window'
   },
+  plugins: [
+    new UglifyJsPlugin({
+      sourceMap: true
+    })
+  ],
   devtool: 'source-map'
 }
 

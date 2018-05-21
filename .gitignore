@@ -3,8 +3,6 @@
 .thumbs.db
 node_modules/
 npm-debug.log*
-test-copy/
 
 # test node build
 build/webpack.config.node.js
-dist-node/

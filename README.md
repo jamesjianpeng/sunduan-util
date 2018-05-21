@@ -9,6 +9,7 @@
 3. 时间格式的转化
 4. 函数节流
 
+npm address: [https://www.npmjs.com/package/sunduan-util](https://www.npmjs.com/package/sunduan-util)
 
 ### Using NPM
 
@@ -35,7 +36,9 @@
   ```
 
   <script src="https://unpkg.com/sunduan-util/dist/sunduan-util.js"></script>
-
+  <script type="text/javascript">
+    console.log(sunduanUtil)
+  </script>
   ```
 
 ### test

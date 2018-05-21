@@ -1,3 +1,3 @@
 const libTest = require('..')
 
-console.log(libTest, '===libtest===')
+console.log(libTest)
