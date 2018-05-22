@@ -8,6 +8,7 @@ before_instal:
 
 install:
   - npm install -g codecov
+  - npm install istanbul
   - npm install
 
 script:
