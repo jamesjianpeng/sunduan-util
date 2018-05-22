@@ -1,0 +1,19 @@
+coverage:
+  round: down
+  precision: 5
+
+# Repository Yaml
+coverage:
+  round: up
+  range: 0..10
+
+# Used in Codecov after updating
+coverage:
+  round: up
+  range: 0..10
+  precision: 5
+
+# branch
+codecov:
+  strict_yaml_branch: dev
+  max_report_age: off

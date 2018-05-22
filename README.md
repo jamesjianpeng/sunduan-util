@@ -1,5 +1,6 @@
 
 ##sunduan-util
+[![Build Status](https://travis-ci.org/jamesjianpeng/sunduan-util.svg?branch=dev)](https://travis-ci.org/jamesjianpeng/sunduan-util)
 --------
 主要为前端提供常用的工具函数
 
