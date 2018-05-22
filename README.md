@@ -1,8 +1,7 @@
 
 ## sunduan-util
 
-[![Build Status](https://travis-ci.org/jamesjianpeng/sunduan-util.svg?branch=dev)](https://travis-ci.org/jamesjianpeng/sunduan-util)
-
+[![Build Status](https://travis-ci.org/jamesjianpeng/sunduan-util.svg?branch=master)](https://travis-ci.org/jamesjianpeng/sunduan-util)
 [![codecov](https://codecov.io/gh/jamesjianpeng/sunduan-util/branch/master/graph/badge.svg)](https://codecov.io/gh/jamesjianpeng/sunduan-util)
 --------
 主要为前端提供常用的工具函数

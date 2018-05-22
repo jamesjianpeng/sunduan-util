@@ -15,5 +15,5 @@ coverage:
 
 # branch
 codecov:
-  strict_yaml_branch: dev
+  strict_yaml_branch: master
   max_report_age: off
