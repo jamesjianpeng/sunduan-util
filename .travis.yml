@@ -14,6 +14,7 @@ install:
 script:
   - istanbul cover ./node_modules/mocha/bin/_mocha --reporter test -- -R spec
   - codecov
+  - bash <(curl -s https://codecov.io/bash)
   - npm run build
 
 branches:
