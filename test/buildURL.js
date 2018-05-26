@@ -32,4 +32,11 @@ describe('buildURL(url, params) special', function() {
   });
 });
 
+describe('buildURL(url, params) default params', function() {
+  var urlThree = 'https://testxxxx.com/comments';
+  it('buildURL(url, params) special error', function() {
+    assert.equal(buildURL(urlThree), 'https://testxxxx.com/comments');
+  });
+});
+
 // });

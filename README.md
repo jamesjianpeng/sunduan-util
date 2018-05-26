@@ -186,10 +186,10 @@ npm address: [https://www.npmjs.com/package/sunduan-util](https://www.npmjs.com/
 
   ### FormatDate
 
-  formatDate.getDate(date, format)
+   - formatDate.getDate(date, format)
 
-  format type: YYYY-MM-DD HH:mm:ss , YYYY/MM/DD HH:mm , YYYY/MM/DD HH , YYYY/MM/DD , YYYY/MM , YYYY ......
-  format 年月日中间使用非字母的字符代替
+    format type: YYYY-MM-DD HH:mm:ss , YYYY/MM/DD HH:mm , YYYY/MM/DD HH , YYYY/MM/DD , YYYY/MM , YYYY ......
+    format 年月日中间使用非字母的字符代替
 
   |           | type        | default              | require  |
   | :-------- |:----------: |:--------------------:|:---------:|
