@@ -1,6 +1,10 @@
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
+const resolve = function(dir) {
+  return path.join(__dirname, '..', dir)
+}
+
 const webpackConfig = {
   // mode: 'production',
   target: "web",
@@ -8,8 +12,21 @@ const webpackConfig = {
   output: {
     path: path.resolve(__dirname, '../dist'),
     filename: 'sunduan-util.js',
-    library: 'sunduanUtil',
-    libraryTarget:'window'
+    library: 'sunduanUtil', //对外暴露的属性名
+    libraryTarget:'window' // 挂载到对应的环境下 window['sunduanUtil']
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        include: [resolve('lib'), resolve('lib')],
+        use: [
+          {
+            loader: 'babel-loader'
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new UglifyJsPlugin({
