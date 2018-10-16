@@ -12,8 +12,14 @@
     "function",
     "browser"
   ],
-  "author": "彭涧",
-  "email": "jamesjianpeng@gmail.com",
+  "contributors": [
+    {
+      "name": "James (@jamesjianpeng)"
+    },
+    {
+      "name": "wenminghui (@whelmin)"
+    }
+  ],
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.3",
