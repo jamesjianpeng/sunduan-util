@@ -30,7 +30,14 @@ const webpackConfig = {
   },
   plugins: [
     new UglifyJsPlugin({
-      sourceMap: true
+      sourceMap: true,
+      // compress: { // 压缩的具体 option
+      //   warnings: false // 删除不可执行的代码
+      // },
+      // output: {
+      //   // 去掉注释内容
+      //   comments: false
+      // }
     })
   ],
   devtool: 'source-map'
