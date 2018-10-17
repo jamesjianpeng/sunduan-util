@@ -1,7 +1,7 @@
 /**
  * @file 
  *  - gitbook 打包 和 服务启动
- * @author jamesjianpeng <pengjian@sobug.com>
+ * @author jamesjianpeng <jamesjianpeng@gmail.com>
  * @see {@link https://www.npmjs.com/package/gitbook-cli} gitbook
  */
 const exec = require('child_process').exec
