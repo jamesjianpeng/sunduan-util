@@ -6,3 +6,6 @@ npm-debug.log*
 
 # test node build
 build/webpack.config.node.js
+
+# docs build fils
+docs/_book
